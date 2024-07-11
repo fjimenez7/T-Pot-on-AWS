@@ -1,0 +1,94 @@
+Cowrie Honeypot Overview
+Purpose
+Cowrie is a medium-interaction SSH and Telnet honeypot designed to emulate a shell environment. 
+Its primary purpose is to capture detailed interaction logs from attackers. 
+The main goal is to record the actions and commands used by attackers, providing defenders with valuable insights into their techniques and objectives.
+
+How Cowrie Works
+Emulation
+SSH and Telnet:
+Cowrie emulates SSH and Telnet services, attracting attackers who use techniques like brute-force attacks to gain unauthorized access to a network.
+
+Fake Filesystem:
+Cowrie creates a fake filesystem that provides attackers with a realistic environment to interact with. 
+This allows defenders to observe the attacker’s actions and movements. The fake filesystem can be customized to mimic different types of systems.
+
+Interaction
+Once an attacker gains access, Cowrie logs all commands executed and captures the output. This includes:
+
+File Downloads
+Command History
+Privilege Escalation Attempts
+What Cowrie Captures
+Session Details:
+Information about the connection, such as IP address, timestamps, and session duration.
+
+Commands:
+Commands entered by attackers and their output.
+
+File Transfers:
+Any files downloaded or uploaded during the session.
+
+Keystrokes:
+Detailed logging of keystrokes, providing insights into the attacker’s techniques, tactics, and procedures.
+
+Why Cowrie is Important
+Cowrie is crucial for defenders because it provides valuable information about attacker techniques, tactics, and procedures. 
+By analyzing logs of attacker activity, defenders can detect new emerging threats and stay ahead in the ongoing cat-and-mouse game of cybersecurity.
+
+Example Insights from My Cowrie Dashboard
+Over a week, I recorded 12,216 attacks from 2,349 unique source IPs. The top countries these attacks originated from were:
+
+China
+United States
+South Korea
+Australia
+Ports Being Attacked
+Port 22 (SSH) | Attacks: 1,389:
+SSH is used to connect to remote devices and issue commands, allowing remote access and control as if you were physically present at the device.
+
+Prevention Tips:
+
+Disable root login
+Use strong passwords
+Enable key-based authentication
+Consider changing the default port from 22 to another port in the range 1024-65535.
+Port 23 (Telnet) | Attacks: 2,167:
+Telnet also allows remote connection to devices but is less secure than SSH. It does not encrypt data, making it vulnerable to attacks.
+
+Prevention Tips:
+
+Block port 23
+Use SSH for secure remote connections
+Port 25 (SMTP) | Attacks: 16:
+SMTP is used for sending and receiving messages between mail servers. Port 25 is the default port but is less secure compared to port 587.
+
+Vulnerabilities:
+
+Spam emails
+Email spoofing
+Potential for DDoS attacks
+Prevention Tips:
+
+Use port 587 for better security features
+Attempted Usernames
+root
+admin
+user
+test
+ubnt
+unknown
+Attempted Passwords
+123456
+password
+admin
+12345678
+123
+qwerty1
+Command Line Inputs
+SSH commands
+System information
+cat /bin/echo
+dd bs=52 count=1 if=.s || cat .s || while read i; do
+
+Attackers primarily used SSH commands and seemed interested in reading the file .s and executing some ping commands.
