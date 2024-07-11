@@ -1,0 +1,52 @@
+Dionaea Honeypot
+
+Overview
+Dionaea is a low-interaction honeypot designed to detect and capture malicious events. Its main goal is to emulate vulnerable services to 
+attract attackers and analyze their methods, providing valuable insights into attacker techniques.
+
+How Dionaea Works
+Dionaea emulates multiple services and protocols, such as SMB, HTTP, FTP, and many more. By presenting these services and protocols, 
+it becomes a target for attackers looking to exploit vulnerabilities. When attackers interact with these services, Dionaea records the details of these 
+interactions. For example, it captures payloads, logs activities, and provides data that you can query for analysis.
+
+What Dionaea Can Capture
+Connection Attempts: Information on who is trying to connect to the honeypot, including IP addresses and ports.
+Payloads: Actual data sent by attackers, such as malware or exploit code.
+Malware Samples: If an attacker uploads or tries to execute malware, Dionaea captures the sample for further analysis.
+Dionaea uses an SQLite database to store logs, making it easy to query. It can also capture network traffic in PCAP format, 
+which can be analyzed using Wireshark or similar tools.
+
+Why This is Important
+Dionaea provides important information, such as attacker IP addresses and their techniques and methods. Understanding what vulnerabilities are being targeted 
+can help organizations prioritize patches. This helps defenders understand emerging threats and attack patterns.
+
+Example Insights from Dionaea Dashboard
+Top Countries Originating Traffic:
+
+Russia
+India
+Sudan
+
+Top Ports Being Hit:
+
+Port 445 (SMB): Server Message Block protocol allows devices to communicate with each other. In the past, attackers have used this port to gain access to 
+network devices, such as in the WannaCry attack. Having this port open allows attackers to gather sensitive information about network devices. 
+It’s recommended to disable port 445 in your firewall and use a VPN if access is needed. Ensure you are using the most up-to-date version of SMB for the
+latest security protections.
+Port 1433: Default TCP port for Microsoft SQL Server instances, used to manage large amounts of data using SQL. Common vulnerabilities include SQL injection. 
+Mitigations include sanitizing user input, proper firewall rules, and strong passwords.
+Captured Usernames and Passwords:
+
+Usernames:
+sa
+root
+anonymous
+Passwords:
+123456789
+000000
+123456
+anonymous
+anon@
+anonymous@
+
+Attackers were attempting to use FTP via port 21 with variations of "anonymous" for usernames and passwords.
