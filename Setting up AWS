@@ -1,1 +1,45 @@
+Getting Started with T-Pot on AWS
 
+Create an AWS Account: If you don't already have one, sign up for an AWS account.
+
+Launch an EC2 Instance:
+
+Navigate to the EC2 Dashboard by typing "EC2" in the AWS search bar.
+Select the region where you want your T-Pot instance to run.
+Configure the EC2 Instance:
+
+Click on Launch Instances to start the setup process.
+Choose an AMI: Select Debian 11 Supported Images as your Amazon Machine Image (AMI).
+Instance Type: Choose t2.xlarge.
+Create a Key Pair:
+
+Click on Create a new key pair.
+Name your key pair, select RSA for the key type, and choose the .pem format.
+Download the key pair to your computer and save it in a secure and easily accessible location.
+Network Settings:
+
+Leave the default network settings for now.
+Configure Storage:
+
+Set the storage size to 128 GiB. Depending on your requirements, you can adjust this, but it is recommended not to go below 50 GiB.
+Resource Requirements:
+
+Ensure you use at least 4 CPUs and 16 GiB of Memory. Using fewer resources may cause the T-Pot Dashboard to lag.
+Note: While Debian 12 may initially work, it has been known to cause issues after a few days, such as problems logging into T-Pot and Docker containers restarting. Hence, Debian 11 is recommended for stability. After these steps you can now create/launch your instance. 
+
+Connecting to Your EC2 Instance
+
+Verify Instance State:
+
+Ensure that your instance state is running.
+Confirm that the instance has passed the 2 status checks.
+Connect to Your Instance:
+
+Select your instance by clicking the checkbox next to your instance name.
+In the top section, click on Connect.
+Choose the SSH client option.
+Copy the SSH command provided under the Example section.
+SSH into Your Instance:
+
+Use a Linux VM or the Mac Terminal to SSH into your AWS instance.
+Ensure you are in the same directory as your key pair file (.pem) when executing the SSH command.
