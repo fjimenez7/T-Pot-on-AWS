@@ -1,1 +1,4 @@
-
+Once you have SSH into your instance run the following commands
+sudo apt-get update
+sudo apt-get- install git -y
+git clone https://github.com/telekom-security/tpotce.git
