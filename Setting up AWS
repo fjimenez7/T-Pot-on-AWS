@@ -25,7 +25,8 @@ Set the storage size to 128 GiB. Depending on your requirements, you can adjust 
 Resource Requirements:
 
 Ensure you use at least 4 CPUs and 16 GiB of Memory. Using fewer resources may cause the T-Pot Dashboard to lag.
-Note: While Debian 12 may initially work, it has been known to cause issues after a few days, such as problems logging into T-Pot and Docker containers restarting. Hence, Debian 11 is recommended for stability. After these steps you can now create/launch your instance. 
+Note: While Debian 12 may initially work, it has been known to cause issues after a few days, such as problems 
+logging into T-Pot and Docker containers restarting. Hence, Debian 11 is recommended for stability. After these steps you can now create/launch your instance. 
 
 Connecting to Your EC2 Instance
 
