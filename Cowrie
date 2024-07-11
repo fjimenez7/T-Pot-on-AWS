@@ -1,75 +1,94 @@
 Cowrie Honeypot Overview
-
-Purpose:
-Cowrie is a medium-interaction SSH and Telent honeypot that is designed to copy a shell environment.
-With the intent to capture detailed interaction logs from attackers. Main goal is to record the actions attackers and 
-commands that they're using. Helps us denfender with providing a insight into their trchniques and objectives when attacking.
+Purpose
+Cowrie is a medium-interaction SSH and Telnet honeypot designed to emulate a shell environment. 
+Its primary purpose is to capture detailed interaction logs from attackers. 
+The main goal is to record the actions and commands used by attackers, providing defenders with valuable insights into their techniques and objectives.
 
 How Cowrie Works
+Emulation
+SSH and Telnet:
+Cowrie emulates SSH and Telnet services, attracting attackers who use techniques like brute-force attacks to gain unauthorized access to a network.
 
-Emulation:
-SSH and Telnet: Cowire emulates SSH and Telnet services, which attract attacker who use techniques likw brute-force
-attacks to gain unauthorized access into a network.
+Fake Filesystem:
+Cowrie creates a fake filesystem that provides attackers with a realistic environment to interact with. 
+This allows defenders to observe the attacker’s actions and movements. The fake filesystem can be customized to mimic different types of systems.
 
-Fale Filesystem: Cowrie creates a fake filesystem, that give attackers a realistic environment to interact with. 
-We get to watch and see what they do and travel accross the netowrk. The fake filesystem can be customized to copy different type of systems as well.
+Interaction
+Once an attacker gains access, Cowrie logs all commands executed and captures the output. This includes:
 
-Interaction:
-Once tha attacker has gained access, Cowrie logs all commands and captures output as well.
-For example this would include file downloads, command history, and privilege escalation attempts.
+File Downloads
+Command History
+Privilege Escalation Attempts
+What Cowrie Captures
+Session Details:
+Information about the connection, such as IP address, timestamps, and session duration.
 
-What Cowrie Captures:
-Session Details: Information about the connection like IP address, timestamps, and session duration
-Commands: Commands being entered by attackers and output is logged
-File Transfers: Any file download or uploaded are captured as well
-Keystrokes: Logging of keystrokes, gives insight on TTP's of attackers 
+Commands:
+Commands entered by attackers and their output.
 
-Why Cowrie is Important:
-Cowrie is imporant to us denfenders, because of the vauable infomration is guves us of attacker technquies, tatciles, and produrces.
-Looking into logs of what attackers are doing can help us detect new emerging thearts and allowing us denfenders trying to stay ahead of this game of cat and mouse.
+File Transfers:
+Any files downloaded or uploaded during the session.
 
-On my Cowrie Dashboards running for about a week I had 12,216 attacks with 2,349 unique source ips.
-The top countires these attacks where coming from was China, United States, South Korea, and Australia.
+Keystrokes:
+Detailed logging of keystrokes, providing insights into the attacker’s techniques, tactics, and procedures.
 
-Ports being attacked:
-Port 22 SSH | Attacks: 1,389 
-Port 22 is dedicated to Securce shell, SSH is used to connect to a remote device and issues commands.
-SSH is very helpful because it lets you remotely access and control devices from anywhere like if you were in front of the computer yourself.
-For these reasons attackers try to SSH device to get a foot hold. Some steps you can do to prevent successful attacks are diable the root login, strong passwords, and enable key-based authentication.
-You can also disable the defualt port of 22 and use another port in the range of 1024-65535.
+Why Cowrie is Important
+Cowrie is crucial for defenders because it provides valuable information about attacker techniques, tactics, and procedures. 
+By analyzing logs of attacker activity, defenders can detect new emerging threats and stay ahead in the ongoing cat-and-mouse game of cybersecurity.
 
-Port 23 Telnet | Attacks: 2,167
-Now Telnet also allows you to connect to devices remotely, but due to security issues SSH is prefered.
-Telnet also lets you run commands once you're conntected to another device like computer, switches and routers for example.
-Telnet is mostly used for legacy systems and on isloated networks to prevent attacks.
-Telnet does not perform any encryption, therefor leeting attackers view credentials and other imporant information when going through telent.
-For these reasons you should stay away from using telent over the internet. For these reasons you should block port 23 and use SSH instead.
+Example Insights from My Cowrie Dashboard
+Over a week, I recorded 12,216 attacks from 2,349 unique source IPs. The top countries these attacks originated from were:
 
-Port 25 SMTP | Attacks 16 
-SMTP(Simlpe Mail Transfer Protocol) is used for sending and receiving messages between mail servers.
-Port 25 is the defualt port, but port 587 is used instead due to better security features.
-Some of the vulnerabilites that are asscoitaed with port 25 is spam emails, email spoofing, and port 25 can also be used for DDos attacks.
+China
+United States
+South Korea
+Australia
+Ports Being Attacked
+Port 22 (SSH) | Attacks: 1,389:
+SSH is used to connect to remote devices and issue commands, allowing remote access and control as if you were physically present at the device.
 
-Attemped Usernames:
+Prevention Tips:
+
+Disable root login
+Use strong passwords
+Enable key-based authentication
+Consider changing the default port from 22 to another port in the range 1024-65535.
+Port 23 (Telnet) | Attacks: 2,167:
+Telnet also allows remote connection to devices but is less secure than SSH. It does not encrypt data, making it vulnerable to attacks.
+
+Prevention Tips:
+
+Block port 23
+Use SSH for secure remote connections
+Port 25 (SMTP) | Attacks: 16:
+SMTP is used for sending and receiving messages between mail servers. Port 25 is the default port but is less secure compared to port 587.
+
+Vulnerabilities:
+
+Spam emails
+Email spoofing
+Potential for DDoS attacks
+Prevention Tips:
+
+Use port 587 for better security features
+Attempted Usernames
 root
 admin
 user
 test
 ubnt
-unknow
-
-Attempted Passwords:
+unknown
+Attempted Passwords
 123456
 password
 admin
 12345678
 123
 qwerty1
-
-Comman Line Inputs:
-shell
-system
+Command Line Inputs
+SSH commands
+System information
 cat /bin/echo
-dd bs=52 count=1 if=.s || cat .s|| while read i; do
+dd bs=52 count=1 if=.s || cat .s || while read i; do
 
-Mostly SSH commands and seems like attackers were intersted in readinga file .s, and some ping commands.
+Attackers primarily used SSH commands and seemed interested in reading the file .s and executing some ping commands.
