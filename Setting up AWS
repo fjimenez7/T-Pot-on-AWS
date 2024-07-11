@@ -42,5 +42,9 @@ Choose the SSH client option.
 Copy the SSH command provided under the Example section.
 SSH into Your Instance:
 
+Before you run the SSH Command run this command 
+chmod 400 RSAKey.pem 
+
+This command will make sure only you have read access and make your key more secure. 
 Use a Linux VM or the Mac Terminal to SSH into your AWS instance.
 Ensure you are in the same directory as your key pair file (.pem) when executing the SSH command.
