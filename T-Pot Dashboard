@@ -1,0 +1,83 @@
+T-Pot Dashboard Overview
+
+T-Pot Dashboard is a central interface for interacting with the T-Pot honeypot framework.
+It provides a comprehensive view of captured data, like attack details, honeypot status,
+and analytical tools. This dashboard is important for monitoring and analyzing malicious
+activities collected by various honeypots within T-Pot.
+
+Importance of T-Pot Dashboard:
+
+Centralized Monitoring: T-Pot offers centralized monitoring for all honeypots and their activities.
+Real-Time Updates: Provides real-time updates on malicious activities and attack patterns.
+
+Data Analysis: Allows users to analyze attack data to understand threat actors' tactics,
+techniques, and procedures (TTPs).
+
+Visualizations: Offers easy-to-digest visual representations of complex attack data in
+an understandable format.
+
+Threat Identification: Helps identify new threats based on attack patterns and efforts,
+assisting in creating and improving defensive measures against common and emerging threats.
+Key Insights from My T-Pot Dashboard:
+
+Total Honeypot Attacks: 224,999
+
+Attacks by Honeypot Destinations: Dionaea, Honeytrap, Cowrie, Redishhoneypot, and Mailoney
+
+Attacks by Country: United States, Russia, India, Egypt, and China
+
+94% from known attackers, 6% from mass scanners
+Attacks by Port Destination:
+
+445 (SMB)
+6379
+23 (Telnet)
+25 (SMTP)
+22 (SSH)
+
+Suricata Alert Category:
+Generic Protocol Communication
+Misc. Attacks
+Privilege Escalation
+Bad Traffic
+Attempted Data Leaks
+Suricata CVEs:
+
+Count: 4,313 | CVE-2020-11899: "The Treck TCP/IP stack before 6.0.1.66 has an IPv6
+Out-of-bounds Read." - cvedetails.com
+
+Count: 667 | CVE-2006-2369: "RealVNC 4.1.1 allows remote attackers to bypass
+authentication via a request with an insecure security type such as 'Type 1 - None', which is
+accepted even if not offered by the server." - cvedetails.com
+
+Count: 70 | CVE-2019-12263/CVE-2019-12261/CVE-2019-12260/CVE-2019-12255: "This
+vulnerability resides in the IPv4 option parsing and may be triggered by IPv4 packets containing
+invalid options, potentially leading to remote code execution." - cisa.gov
+
+Count: 51 | CVE-2019-11500/CVE-2019-11500: "In Dovecot before 2.2.36.4 and 2.3.x before
+2.3.7.2, protocol processing can fail for quoted strings, leading to out-of-bounds writes and
+remote code execution." - nvd.nost.gov
+Importance and Impact:
+
+Deploying T-Pot on AWS provides significant advantages for cybersecurity monitoring and research.
+The cloud-based deployment ensures scalability, availability, and flexibility, allowing continuous
+observation of evolving threat landscapes. By capturing real-world attack data, T-Pot helps
+organizations and security professionals understand emerging threats, refine their defensive
+strategies, and stay ahead of malicious actors.
+
+This project has not only strengthened my skills in deploying and managing honeypots but also
+provided practical experience in analyzing cyber threats. The insights gained from this endeavor
+contribute to the broader field of cybersecurity by enhancing our understanding of attacker behavior
+and improving our ability to defend against future attacks.
+
+I hope this documentation serves as a useful guide for others looking to deploy T-Pot on AWS and
+encourages further exploration and innovation in the field of honeypot-based threat detection.
+
+
+
+
+
+
+
+
+
