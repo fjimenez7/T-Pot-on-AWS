@@ -1,4 +1,68 @@
-Once you have SSH into your instance run the following commands
+Connecting to Your EC2 Instance and Installing T-Pot
+
+SSH into Your Instance:
+
+Ensure you are in the same directory as your key pair file (.pem).
+
+Run the following commands:
+
 sudo apt-get update
 sudo apt-get- install git -y
 git clone https://github.com/telekom-security/tpotce.git
+
+Install T-Pot:
+
+Navigate to the tpotce directory:
+cd tpotce
+
+Run the installer:
+./install.sh 
+
+During the installation:
+
+Select the Hive (H) option.
+Set a complex username and password when prompted.
+Reboot the system:
+sudo reboot 
+
+Configure Security Group on AWS:
+
+Go to your instance on AWS, select the checkbox next to your instance name.
+
+Click on the Security tab below, then click on Security Groups and select the security group ID.
+
+Click on Edit Inbound Rules to the right.
+
+Update the rules:
+
+Delete the first rule with SSH on port 22.
+
+Add the following rules:
+
+After installing T-Pot our SSH port is now 64295
+Our T-Pot web interface can be accessed on 64297
+
+Type:Custom TCP, Protcal:TCP, Port Rang:64295 Source:MY_IP_ONLY Description:SSH 
+Type:Custom TCP, Protcal:TCP, Port Rang:64297 Source:MY_IP_ONLY Description:T-Pot Portal
+Type:Custom TCP, Protcal:TCP, Port Rang:1-64000 Source:ipv4_ANYWHERE Description:For Attackers
+Type:Custom TCP, Protcal:TCP, Port Rang:1-64000 Source:ipv6_ANYWHERE Description:For Attackers 
+
+SAVE RULES
+
+*When you SSH into your instance make sure to add -p 64295 at the end of the command to target our new SSH port
+
+Access T-Pot Web Portal:
+
+Go to your instances and click on Details.
+
+Copy your IPv4 address.
+
+Access the T-Pot web interface by typing:
+
+https://your_ipv4_address:64297 
+
+Enter the username and password you created. If you have trouble logging in, ensure the username and 
+password are correct and try capitalizing the first letter of your username.
+
+Next Section: T-Pot Analysis
+In the next section, I will discuss the Attack Map and my top 3 most attacked dashboards in Kibana.
