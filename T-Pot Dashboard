@@ -1,0 +1,88 @@
+T-Pot Dashboard Overview
+
+T-Pot Dashboard is a central Dashbaord for interacting with the T-Pot honeypot framework.
+It provides a comprehensive view of captured data, like attack details, honeypot status,a and
+analytical tools. This dashboard is imporant for monitoring and analyzing malicious activities that are collected
+by various honeypots that are within T-Pot.
+
+Importance of T-Pot Dashboard:
+
+T-Pot offers a centralized monitoring for all of T-Pot honeypots and their actvities.
+Displays the information in real-time updates on malicious activites and attack patterns.
+This allows users to analyze attack data to understand theart actors TTPs. The visualizations 
+offer a easy way to diegust all of the information being displayed that represent complex attack data
+in a understanble format. 
+
+Being able to collect of this information on atttackers and their TTPs help identify new threats
+based on attack patterns and efforts. This will assists in creating and improving defensive measures
+against common and emerging threats.
+
+Now we will be going through some of the information collected on my T-Pot Dashboard:
+
+Total HoneyPot Attacks 224,999
+Attacks by Honeypot destions: Dionaea, Honeytrap, Cowrie, Redishhoneypot, and Mailoney
+
+Attacks by Country: United States, Russia, India, Egypt, and China
+Most attacks were by know attackers 94% and 6% from mass scaners
+
+Attacks by Port destination: 445(SMB), 6379, 23(telnet), 25(SMTP), 22(SSH)
+
+Suricata Alert Category:
+Generic Protocol Communcation
+Misc. Attacks
+Privegle esclastion
+Bad Traffic
+Attempted Data leaks
+
+Suricata CVE: 
+
+Count: 4,313 | CVE-2020-11899 "The Treck TCP/IP stack before 6.0.1.66 has an IPv6 Out-of-bounds Read." -cvedetails.com
+
+Count: 667 | CVE-2006-2369 "RealVNC 4.1.1, and other products that use RealVNC such as AdderLink IP and Cisco CallManager, 
+allows remote attackers to bypass authentication via a request in which the client specifies an insecure security type such as 
+"Type 1 - None", which is accepted even if it is not offered by the server, as originally demonstrated using a long password." -cvedetails.com
+
+Count 70 | CVE-2019-12263/CVE-2019-12261/CVE-2019-12260/CVE-2019-12255
+
+Count 51 | CVE-2019-11500/CVE-2019-11500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Importance and Impact:
+
+Deploying T-Pot on AWS provides significant advantages for cybersecurity monitoring and research. The cloud-based deployment ensures scalability, availability, and flexibility, allowing continuous 
+observation of evolving threat landscapes. By capturing real-world attack data, T-Pot helps organizations and security professionals understand emerging threats, refine their defensive strategies,
+and stay ahead of malicious actors.This project has not only strengthened my skills in deploying and managing honeypots but also provided practical experience in analyzing cyber threats. 
+The insights gained from this endeavor contribute to the broader field of cybersecurity by enhancing our understanding of attacker behavior and improving our ability to defend against future attacks.
+I hope this documentation serves as a useful guide for others looking to deploy T-Pot on AWS and encourages further exploration and innovation in the field of honeypot-based threat detection.
