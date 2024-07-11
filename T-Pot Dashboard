@@ -42,41 +42,11 @@ Count: 667 | CVE-2006-2369 "RealVNC 4.1.1, and other products that use RealVNC s
 allows remote attackers to bypass authentication via a request in which the client specifies an insecure security type such as 
 "Type 1 - None", which is accepted even if it is not offered by the server, as originally demonstrated using a long password." -cvedetails.com
 
-Count 70 | CVE-2019-12263/CVE-2019-12261/CVE-2019-12260/CVE-2019-12255
+Count 70 | CVE-2019-12263/CVE-2019-12261/CVE-2019-12260/CVE-2019-12255 "his vulnerability resides in the IPv4 option parsing and may be triggered by 
+IPv4 packets containing invalid options. The most likely outcome of triggering this defect is that the tNet0 task crashes. This vulnerability can result in remote code execution." -cisa.gov
 
-Count 51 | CVE-2019-11500/CVE-2019-11500
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Count 51 | CVE-2019-11500/CVE-2019-11500 "In Dovecot before 2.2.36.4 and 2.3.x before 2.3.7.2 (and Pigeonhole before 0.5.7.2), protocol processing can fail for quoted strings. 
+This occurs because '\0' characters are mishandled, and can lead to out-of-bounds writes and remote code execution." -nvd.nost.gov
 
 
 Importance and Impact:
