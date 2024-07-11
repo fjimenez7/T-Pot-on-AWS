@@ -1,0 +1,16 @@
+T-Pot Attack Map
+The T-Pot Attack Map is a fascinating and interactive dashboard. As the name suggests, this dashboard shows you exactly who is attacking your T-Pot instance. 
+It displays detailed information such as:
+
+Country of Origin
+IP Address
+Specific Honeypot Being Targeted
+Type of Service Under Attack
+
+Each attack is color-coded, making it easy to identify which service the attacker is using at a glance.
+
+Additionally, the Attack Map provides real-time updates, allowing you to monitor ongoing attacks as they happen. 
+This visualization helps in understanding the geographical distribution of attacks and identifying patterns in the types of services being targeted. 
+The dashboard also offers filtering options, enabling you to focus on specific honeypots, services, or regions for more detailed analysis.
+
+By leveraging the insights from the Attack Map, you can better understand the threat landscape and enhance your defensive strategies.
